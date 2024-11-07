@@ -1,0 +1,326 @@
+/* css login */
+
+@font-face {
+  font-family: 'TT Commons Pro Expanded';
+  src: url('./assets/fonts/tt_commons_pro_regular.otf')format('otf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Commons Pro Expanded';
+  src: url('./assets/fonts/tt_commons_pro_expanded_bold.otf')format('otf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./assets/img/FondoMetalico.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1c1c1c;
+}
+
+.login-container {
+  display: flex;
+  border-radius: 19px;
+  border: 4px solid #f63535;
+  overflow: hidden;
+  width: 950px;
+  height: 400px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.form-section {
+  background-color: #a7a2a3;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  z-index: 0;
+}
+
+.logo {
+  width: 129px;
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  font-size: 40px !important;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+.input-field {
+  width: 50%;
+  height: 60px;
+  padding-left: 110px;
+  padding-right: 90px;
+  font-size: 13.4px;
+  font-weight: bold;
+  border-radius: 25px;
+  outline: none;
+  font-family: 'TT Commons Pro Expanded', sans-serif;
+}
+
+.input-field:focus {
+  border-color: #0d2d59;
+  box-shadow: 0 0 5px rgba(13, 45, 89, 0.5);
+}
+
+.login-button {
+  width: 45%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: #0d2d59;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 18px 0 18px 29%;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #002244;
+}
+
+.image-section {
+  width: 52%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.tires-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .form-section,
+  .image-section {
+    width: 100%;
+    position: static;
+    border-radius: 0;
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .tires-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .input-field {
+    width: 80%;
+    padding-left: 40px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+
+  .login-button {
+    width: 80%;
+    margin-left: 10%;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+/* Custom media query for 769px to 942px width */
+@media (min-width: 481px) and (max-width: 942px) {
+  .login-container {
+    flex-direction: column;  /* Stack sections vertically */
+    align-items: center;
+    width: 90%;
+    height: auto;
+  }
+
+  .form-section {
+    width: 100%;  /* Take full width to avoid overlap */
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 0;  /* Remove bottom-left radius for vertical stacking */
+    border-top-right-radius: 15px;  /* Add top-right radius */
+    padding-bottom: 20px;  /* Add spacing for better UI */
+  }
+
+  .image-section {
+    width: 100%;  /* Make image section full width */
+    height: 200px;  /* Set a fixed height for consistency */
+    border-top-right-radius: 0;  /* Remove top-right radius for stacking */
+    border-bottom-left-radius: 15px;  /* Add rounded bottom-left corner */
+    border-bottom-right-radius: 15px;  /* Add rounded bottom-right corner */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: static;  /* Remove absolute positioning */
+  }
+
+  .tires-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Other responsive media queries for smaller screens */
+
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .form-section,
+  .image-section {
+    width: 100%;
+    position: static;
+    border-radius: 0;
+  }
+
+  .image-section {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .tires-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .input-field {
+    width: 80%;
+    padding-left: 70px;
+    padding-right: 30px;
+    font-size: 13.4px;
+  }
+
+  .login-button {
+    width: 60%;
+    margin-left: 26%;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+
+/* Adjustments for screens smaller than 480px */
+@media (max-width: 480px) {
+  .login-page {
+    padding: 0px; /* Add padding to avoid container touching screen edges */
+  }
+
+  .login-container {
+    width: 90%;       /* Full width to maximize space */
+    padding: 0px;     /* Internal padding for a balanced look */
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    border: 4px solid #f63535;  /* Keep border with reduced thickness */
+    border-radius: 10px;        /* Reduced radius for smaller screens */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for subtle effect */
+  }
+
+  .form-section {
+    width: 100%;          /* Take full width */
+    padding: 16px 0;      /* Add padding for spacing */
+    text-align: center;
+    border-radius: 6px;  /* Add rounded corners */
+  }
+
+  .logo {
+    width: 80px;          /* Smaller logo size */
+    margin-bottom: 15px;
+  }
+
+  .input-container {
+    width: 90%;           /* Increased width */
+    margin-bottom: 15px;  /* Reduced spacing */
+  }
+
+  .icon {
+    font-size: 30px !important;      /* Smaller icon size */
+    left: 10px;           /* Adjust position */
+  }
+
+  .input-field {
+    width: 100%;          /* Full width within input container */
+    padding-left: 39px;   /* Space for the icon */
+    padding-right: 12px;
+    height: 45px;         /* Reduce height to fit */
+    font-size: 12px;      /* Adjust font size for readability */
+  }
+
+  .login-button {
+    width: 70%;           /* Full width for balance */
+    height: 45px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .image-section {
+    width: 100%;
+    height: 180px;        /* Set fixed height */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 7px;  /* Rounded corners */
+  }
+
+  .tires-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+  

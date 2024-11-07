@@ -1,0 +1,36 @@
+/* src/TiresPage.css */
+
+.container_main {
+  display: flex;
+  align-items: flex-start;
+  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+  overflow: hidden; /* Evita el desbordamiento en el contenedor principal */
+}
+
+.tires-grid {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan si no hay suficiente espacio */
+  gap: 30px; /* Espaciado entre tarjetas */
+  margin-top: 20px; /* Espacio superior para separar de la cabecera */
+  justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+  max-width: 100%; /* Evita que el contenedor exceda el ancho de la pantalla */
+  }
+  
+  .background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a; /* Cambia el color según el diseño */
+    height: calc(100vh - 60px); /* Ajusta la altura del fondo */
+    overflow-y: auto; /* Agrega scroll solo si es necesario */
+    max-width: 100%; /* Evita que el contenedor exceda el ancho de la pantalla */
+    margin-left: 150px; /* Margen izquierdo cuando el sidebar está expandido */
+    transition: margin-left 0.3s ease;
+  }
+
+  .sidebar.collapsed ~ .background {
+    margin-left: 60px; /* Ajuste del margen cuando el sidebar está colapsado */
+  }
+  

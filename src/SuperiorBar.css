@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'TT Commons Pro Expanded';
+    src: url('./assets/fonts/tt_commons_pro_regular.otf')format('otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons Pro Expanded';
+    src: url('./assets/fonts/tt_commons_pro_expanded_bold.otf')format('otf');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+.superior-bar {
+    background-color: #ebebeb; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 25px 20px;
+    position: fixed; 
+    top: 0;
+    left: 150px;
+    width: calc(100% - 150px);
+    height: 25px;
+    z-index: 100;
+    transition: left 0.3s ease, width 0.3s ease;
+  }
+
+  .superior-bar.collapsed {
+    left: 60px; /* Ajuste cuando el sidebar está colapsado */
+    width: calc(100% - 60px);
+  }
+  
+  .superior-text {
+    height: 30px;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .superior-button {
+    background-color: #ff3131; 
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 18px;
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 35px;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  .superior-button:hover {
+    background-color: darkred;
+    color: white;
+  }
+  

@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'TT Commons Pro Expanded';
+    src: url('./assets/fonts/tt_commons_pro_regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Commons Pro Expanded';
+    src: url('./assets/fonts/tt_commons_pro_expanded_bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.filter-bar {
+    background-color: #ebebeb; 
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    position: fixed; 
+    top: 0;
+    left: 150px;
+    width: calc(100% - 150px);
+    height: auto;
+    z-index: 100;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+.filter-bar.collapsed {
+    left: 60px; /* Ajuste cuando el sidebar está colapsado */
+    width: calc(100% - 60px);
+  }
+
+.filter-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.filter-text {
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    line-height: 30px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.close-session {
+    background-color: #ff3131; 
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 18px;
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    margin-right: 35px;
+}
+
+.close-session:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.filter-form {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap; /* Para que se ajuste en pantallas pequeñas */
+    margin-right: 35px;
+    gap: 15px; /* Aumenta el espacio entre los elementos */
+}
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-field label {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    margin-bottom: 5px;
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+.filter-field input,
+.filter-field select {
+    background-color: #3d3b3d;
+    color: white;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    width: 112px;
+    font-weight: bold;
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+}
+
+.filter-field input {
+    height: 32px; /* Ajuste para igualar el select */
+}
+
+.filter-field select {
+    height: 32px;
+}
+
+.filter-field input::placeholder,
+.filter-field select::placeholder {
+  color: #ffffff;
+  font-family: 'TT Commons Pro Expanded', sans-serif;
+}
+
+.search-button {
+    font-size: 12px;
+    padding: 10px 20px;
+    background-color: #0d2d59;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    align-self: center;
+    width: 130px;
+    font-weight: bold;
+    font-family: 'TT Commons Pro Expanded', sans-serif;
+    margin-top: 16px;
+}
+
+.search-button:hover {
+    background-color: #1c3f7e;
+}

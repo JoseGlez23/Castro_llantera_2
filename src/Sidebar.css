@@ -1,0 +1,106 @@
+/* Sidebar.css */
+
+.sidebar {
+  width: 150px; /* Expanded width */
+  height: 100vh;
+  background-color: #3d3b3d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  border-right: 1px solid #444;
+  overflow: hidden;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px; /* Collapsed width */
+}
+
+.logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed .logo-container {
+  opacity: 0;
+}
+
+.logo {
+  max-width: 80%;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex; /* Cambiado a flex para icono + texto */
+  align-items: center;
+  justify-content: center; /* Centro en modo colapsado */
+  width: 140px;
+  padding: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: 'Libre Baskerville', serif;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 5px solid transparent;
+  margin-bottom: 25px;
+  transition: opacity 0.3s ease, font-size 0.3s ease;
+}
+
+.sidebar.collapsed .nav-link {
+  font-size: 0; /* Ocultar texto en modo colapsado */
+}
+
+.nav-icon {
+  font-size: 24px; /* Tamaño de icono */
+  margin-right: 10px;
+  color: #fff;
+}
+
+.sidebar.collapsed .nav-icon {
+  margin-right: 0; /* Sin espacio cuando está colapsado */
+}
+
+/* Propiedades del link activo con gradiente */
+.nav-link.active {
+  background-color: #222;
+  color: #fff;
+  font-weight: bold;
+  background-image: linear-gradient(to top, #000000, #3d3b3d);
+  background-size: 120% 150%;
+  background-position: center top;
+  border-radius: 4px;
+  padding: 5px 0;
+  transition: background-color 0.3s ease, background-image 0.3s ease;
+}
+
+.sidebar.collapsed .nav-link.active {
+  background-image: none;
+}
+
+/* Toggle button styling */
+.sidebar-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #3d3b3d;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
